@@ -49,7 +49,7 @@ foreach ($_SERVER['argv'] as $arg) {
     if ('--files' == $arg) {
         $addTemplate = true;
     } else if ($addTemplate) {
-        $extractor->addTemplate(getcwd().DIRECTORY_SEPARATOR.$arg);
+        $extractor->addTemplate($arg);
     } else {
         $extractor->addGettextParameter($arg);
     }
