@@ -41,7 +41,13 @@ class Extractor
 
     public function __construct(\Twig_Environment $environment)
     {
+        // Set twig environment
         $this->environment = $environment;
+
+        // Add extension to twig environment
+        $this->environment->addExtension(new \Twig\Gettext\Extensions\Formatter());
+
+        // Reset
         $this->reset();
     }
 
