@@ -12,7 +12,7 @@ The recommended way to install Twig Gettext Extractor is through
 ```json
 {
     "require": {
-        "umpirsky/twig-gettext-extractor": "1.1.*"
+        "unit27/twig-gettext-extractor": "1.1.*"
     }
 }
 ```
