@@ -9,8 +9,13 @@
  * file that was distributed with this source code.
  */
 
+// Default namespace
 namespace Twig\Gettext;
 
+// Include extensions
+require_once "Extensions/Formatter.class.php";
+
+// Use filesystem
 use Symfony\Component\Filesystem\Filesystem;
 
 /**

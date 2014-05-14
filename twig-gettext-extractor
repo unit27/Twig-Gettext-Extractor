@@ -51,6 +51,15 @@ foreach ($_SERVER['argv'] as $arg) {
     } else if ($addTemplate) {
         $extractor->addTemplate($arg);
     } else {
+        // Create temporary folder (bug fix for poEdit in Unix-like OS)
+        if (strtoupper(substr(PHP_OS, 0, 3)) !== 'WIN') {
+            if (strpos($arg, "/var/folders") !== false) {
+                if (file_exists(dirname($arg)) === false) {
+                    mkdir(dirname($arg), 0777, true);
+                }
+            }
+        }
+
         $extractor->addGettextParameter($arg);
     }
 }
