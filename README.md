@@ -1,4 +1,4 @@
-unit27: Twig Gettext Extractor
+unit27: Twig Gettext Extractor (PHP)
 ======================
 
 The Twig Gettext Extractor is [Poedit](http://www.poedit.net/download.php)
